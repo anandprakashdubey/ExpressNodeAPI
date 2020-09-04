@@ -1,0 +1,16 @@
+Version 0 - 
+
+In package.json after main add below code if Node version is above 14 so it will allow us to use import statement
+
+// "type":"module",
+
+else we can use babel to make import work with node 10 version
+
+Initially, if we want to run express page, we can use "node index.js" it will run. but to make like webpack we need nodemon
+After install nodemon, in package we add command as start: nodemon index.js(or start.js)
+
+
+Following Commands
+
+npm install --save express
+npm install --save-dev nodemon
