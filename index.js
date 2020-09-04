@@ -1,5 +1,7 @@
-const express = require('express');
-const bodyParse = require('body-parser');
+import express from 'express';
+import bodyParse from 'body-parser';
+import userRouter from './routes/users.js';
+
 
 const app = express();
 const PORT = '5000';
@@ -8,9 +10,7 @@ app.use(bodyParse.json()); // This is saying that we are going to JSON format th
 
 
 //Below code is for routing because node and express is all about routing.
-app.get('/users',(req,res)=>{
-    res.send('This is the response from users routing');
-});
+app.use('/',userRouter);
 
 app.get('/',(req,res)=>{
     console.log('This is Home Page of Routing');
